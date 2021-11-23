@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Info Ambiental</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<style>
+    details {
+        width: 50%;
+        margin: 0 auto ;
+        margin-bottom: .5rem;
+        box-shadow: 0 .1rem 1rem -.5rem rgba(0,0,0,.4);
+        border-radius: 5px;
+        overflow: hidden;
+        }
+
+        summary {
+        padding: 1rem;
+        display: block;
+        background: #333;
+        padding-left: 2.2rem;
+        position: relative;
+        cursor: pointer;
+        }
+
+        summary:before {
+        content: '';
+        border-width: .4rem;
+        border-style: solid;
+        border-color: transparent transparent transparent #fff;
+        position: absolute;
+        top: 1.3rem;
+        left: 1rem;
+        transform: rotate(0);
+        transform-origin: .2rem 50%;
+        transition: .25s transform ease;
+        }
+
+        /* THE MAGIC 🧙‍♀️ */
+        details[open] > summary:before {
+        transform: rotate(90deg);
+        }
+
+
+        details summary::-webkit-details-marker {
+        display:none;
+        }
+
+        details > ul {
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+        }
+    .texto_meio{
+        vertical-align:middle;
+    }
+    input[type=checkbox]{
+        transform: scale(1.5);
+    }
+    label{
+        margin-left: 1%
+    }
+</style>
+    <main>
+        <div class="pagetitle" style="text-align: center; margin-top: 1%">
+            <h1>Info Ambiental</h1>
+        </div><!-- End Page Title -->
+        <hr />
+        <section class="section">
+            <div class="card recent-sales">
+                <details>
+                    <summary style="color: white;" class="bg-primary">Moradia</summary>
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>1 - Quantas pessoas moram em sua residência?</strong></p>
+                        <input type="radio" name="moradia_1" id="moradia_1_a" /><label for="moradia_1_a">a) 1</label><br />
+                        <input type="radio" name="moradia_1" id="moradia_1_b" /><label for="moradia_1_b">b) 2</label><br />
+                        <input type="radio" name="moradia_1" id="moradia_1_c" /><label for="moradia_1_c">c) 3</label><br />
+                        <input type="radio" name="moradia_1" id="moradia_1_d" /><label for="moradia_1_d">d) 4</label><br />
+                        <input type="radio" name="moradia_1" id="moradia_1_e" /><label for="moradia_1_e">e) 5 ou mais</label><br />
+                    </div>
+                    <hr />
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>2 - Qual o sistema de aquecimento da casa?</strong></p>
+                        <input type="radio" name="moradia_2" id="moradia_2_a" /><label for="moradia_2_a">a) Gás natural</label><br />
+                        <input type="radio" name="moradia_2" id="moradia_2_b" /><label for="moradia_2_b">b) Electricidade</label><br />
+                        <input type="radio" name="moradia_2" id="moradia_2_c" /><label for="moradia_2_c">c) Gasóleo</label><br />
+                        <input type="radio" name="moradia_2" id="moradia_2_d" /><label for="moradia_2_d">d) Fontes renováveis (solar, eólica)</label><br />
+                    </div>
+                    <hr />
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>3 - Quantas torneiras têm em sua residência?</strong></p>
+                        <input type="radio" name="moradia_3" id="moradia_3_a" /><label for="moradia_3_a">a) Menos de 3</label><br />
+                        <input type="radio" name="moradia_3" id="moradia_3_b" /><label for="moradia_3_b">b) 3 a 5</label><br />
+                        <input type="radio" name="moradia_3" id="moradia_3_c" /><label for="moradia_3_c">c) 6 a 8</label><br />
+                        <input type="radio" name="moradia_3" id="moradia_3_d" /><label for="moradia_3_d">d) 8 a 10</label><br />
+                        <input type="radio" name="moradia_3" id="moradia_3_e" /><label for="moradia_3_e">e) mais de 10</label><br />
+                    </div>
+                    <hr />
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>4 - Em que tipo de residência você vive?</strong></p>
+                        <input type="radio" name="moradia_4" id="moradia_4_a" /><label for="moradia_4_a">a) Apartamento</label><br />
+                        <input type="radio" name="moradia_4" id="moradia_4_b" /><label for="moradia_4_b">b) Moradia</label><br />
+                    </div>
+                </details>
+
+                <details>
+                    <summary style="color: white;" class="bg-success">Alimentação</summary>
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>1 - Quantas refeições de carne ou de peixe você come por semana?</strong></p>
+                        <input type="radio" name="alimentacao_1" id="alimentacao_1_a" /><label for="alimentacao_1_a">a) Nenhuma</label><br />
+                        <input type="radio" name="alimentacao_1" id="alimentacao_1_b" /><label for="alimentacao_1_b">b) 1 a 3</label><br />
+                        <input type="radio" name="alimentacao_1" id="alimentacao_1_c" /><label for="alimentacao_1_c">c) 4 a 6</label><br />
+                        <input type="radio" name="alimentacao_1" id="alimentacao_1_d" /><label for="alimentacao_1_d">d) 7 a 10</label><br />
+                        <input type="radio" name="alimentacao_1" id="alimentacao_1_e" /><label for="alimentacao_1_e">e) Mais de 10</label><br />
+                    </div>
+                    <hr />
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>2 - Quantas refeições feitas em casa é que comes por semana?</strong></p>
+                        <input type="radio" name="alimentacao_2" id="alimentacao_2_a" /><label for="alimentacao_2_a">a) Menos de 10</label><br />
+                        <input type="radio" name="alimentacao_2" id="alimentacao_2_b" /><label for="alimentacao_2_b">b) 10 a 14</label><br />
+                        <input type="radio" name="alimentacao_2" id="alimentacao_2_c" /><label for="alimentacao_2_c">c) 15 a 18</label><br />
+                        <input type="radio" name="alimentacao_2" id="alimentacao_2_d" /><label for="alimentacao_2_d">d) Mais de 10</label><br />
+                    </div>
+                    <hr />
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>3 - Costuma comprar alimentos produzidos localmente?</strong></p>
+                        <input type="radio" name="alimentacao_3" id="alimentacao_3_a" /><label for="alimentacao_3_a">a) Sim</label><br />
+                        <input type="radio" name="alimentacao_3" id="alimentacao_3_b" /><label for="alimentacao_3_b">b) Não</label><br />
+                        <input type="radio" name="alimentacao_3" id="alimentacao_3_c" /><label for="alimentacao_3_c">c) Às vezes</label><br />
+                        <input type="radio" name="alimentacao_3" id="alimentacao_3_d" /><label for="alimentacao_3_d">d) Raramente</label><br />
+                    </div>
+                </details>
+
+                <details>
+                    <summary style="color: white;" class="bg-warning">Transposrte</summary>
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>1 - Que tipo de automóvel você possui?</strong></p>
+                        <input type="radio" name="transporte_1" id="transporte_1_a" /><label for="transporte_1_a">a) Motocicleta</label><br />
+                        <input type="radio" name="transporte_1" id="transporte_1_b" /><label for="transporte_1_b">b) Carro à gás</label><br />
+                        <input type="radio" name="transporte_1" id="transporte_1_c" /><label for="transporte_1_c">c) Carro à gasolina</label><br />
+                        <input type="radio" name="transporte_1" id="transporte_1_d" /><label for="transporte_1_d">d) Não possui</label><br />
+                    </div>
+                    <hr />
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>2 - Qual meio de transporte utilizado para ir ao trabalho?</strong></p>
+                        <input type="radio" name="transporte_2" id="transporte_2_a" /><label for="transporte_2_a">a) Carro</label><br />
+                        <input type="radio" name="transporte_2" id="transporte_2_b" /><label for="transporte_2_b">b) Motocicleta</label><br />
+                        <input type="radio" name="transporte_2" id="transporte_2_c" /><label for="transporte_2_c">c) Transportes públicos</label><br />
+                        <input type="radio" name="transporte_2" id="transporte_2_d" /><label for="transporte_2_d">d) Bicicleta ou a pé</label><br />
+                    </div>
+                    <hr />
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>3 - Quantos quilômetros percorre de carro para chegar ao trabalho?</strong></p>
+                        <input type="radio" name="transporte_3" id="transporte_3_a" /><label for="transporte_3_a">a) Menos de 10</label><br />
+                        <input type="radio" name="transporte_3" id="transporte_3_b" /><label for="transporte_3_b">b) Entre 10 e 30</label><br />
+                        <input type="radio" name="transporte_3" id="transporte_3_c" /><label for="transporte_3_c">c) Entre 30 e 50</label><br />
+                        <input type="radio" name="transporte_3" id="transporte_3_d" /><label for="transporte_3_d">d) Entre 50 e 100</label><br />
+                        <input type="radio" name="transporte_3" id="transporte_3_e" /><label for="transporte_3_e">e) Mais de 100 </label><br />
+                    </div>
+                    <hr />
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>4 - Em quantos fins-de-semana você viaja de carro (mínimo 20 km de distância)</strong></p>
+                        <input type="radio" name="transporte_4" id="transporte_4_a" /><label for="transporte_4_a">a) 0</label><br />
+                        <input type="radio" name="transporte_4" id="transporte_4_b" /><label for="transporte_4_b">b) 1 a 3</label><br />
+                        <input type="radio" name="transporte_4" id="transporte_4_c" /><label for="transporte_4_c">c) 4 a 6</label><br />
+                        <input type="radio" name="transporte_4" id="transporte_4_d" /><label for="transporte_4_d">d) 7 a 9</label><br />
+                        <input type="radio" name="transporte_4" id="transporte_4_e" /><label for="transporte_4_e">e) mais de 9</label><br />
+                    </div>
+                </details>
+
+                <details>
+                    <summary style="color: white;" class="bg-danger">Consumo</summary>
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>1 - Quantos eletrônicos/eletrodomésticos você comprou este ano? (por exemplo: TV, computador, geladeira, etc.)</strong></p>
+                        <input type="radio" name="consumo_1" id="consumo_1_a" /><label for="consumo_1_a">a) 0</label><br />
+                        <input type="radio" name="consumo_1" id="consumo_1_b" /><label for="consumo_1_b">b) 1 a 3</label><br />
+                        <input type="radio" name="consumo_1" id="consumo_1_c" /><label for="consumo_1_c">c) 4 a 6</label><br />
+                        <input type="radio" name="consumo_1" id="consumo_1_d" /><label for="consumo_1_d">d) mais de 6</label><br />
+                    </div>
+                    <hr />
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>2 - Costuma comprar produtos com baixo consumo de energia?</strong></p>
+                        <input type="radio" name="consumo_2" id="consumo_2_a" /><label for="consumo_2_a">a) Sim</label><br />
+                        <input type="radio" name="consumo_2" id="consumo_2_b" /><label for="consumo_2_b">b) Não</label><br />
+                    </div>
+                </details>
+                <details>
+                    <summary style="color: white;" class="bg-info">Resíduos</summary>
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>1 - Costuma reduzir a produção de resíduos? (por exemplo: evitas produtos com muita embalagem, reutilizar o papel, evita os sacos de plástico, etc.)</strong></p>
+                        <input type="radio" name="residuos_1" id="residuos_1_a" /><label for="residuos_1_a">a) Sempre</label><br />
+                        <input type="radio" name="residuos_1" id="residuos_1_b" /><label for="residuos_1_b">b) Às vezes</label><br />
+                        <input type="radio" name="residuos_1" id="residuos_1_c" /><label for="residuos_1_c">c) Raramente</label><br />
+                        <input type="radio" name="residuos_1" id="residuos_1_d" /><label for="residuos_1_d">d) Nunca</label><br />
+                    </div>
+                    <hr />
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>2 - Pratica compostagem de resíduos organicôs?</strong></p>
+                        <input type="radio" name="residuos_2" id="residuos_2_a" /><label for="residuos_2_a">a) Sempre</label><br />
+                        <input type="radio" name="residuos_2" id="residuos_2_b" /><label for="residuos_2_b">b) Às vezes</label><br />
+                        <input type="radio" name="residuos_2" id="residuos_2_c" /><label for="residuos_2_c">c) Nunca</label><br />
+                    </div>
+                    <hr />
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>3 - Costuma seperar o lixo para que seja reciclado?</strong></p>
+                        <input type="radio" name="residuos_3" id="residuos_3_a" /><label for="residuos_3_a">a) Sempre</label><br />
+                        <input type="radio" name="residuos_3" id="residuos_3_b" /><label for="residuos_3_b">b) Às vezes</label><br />
+                        <input type="radio" name="residuos_3" id="residuos_3_c" /><label for="residuos_3_c">c) Raramente</label><br />
+                        <input type="radio" name="residuos_3" id="residuos_3_d" /><label for="residuos_3_d">d) Nunca</label><br />
+                    </div>
+                    <hr />
+                    <div style="margin-top: 1%; margin-left:1%">
+                        <p><strong>4 - Quantos sacos de lixo utliza por semana?</strong></p>
+                        <input type="radio" name="residuos_4" id="residuos_4_a" /><label for="residuos_4_a">a) 1</label><br />
+                        <input type="radio" name="residuos_4" id="residuos_4_b" /><label for="residuos_4_b">b) 2</label><br />
+                        <input type="radio" name="residuos_4" id="residuos_4_c" /><label for="residuos_4_c">c) 3 ou mais</label><br />
+                    </div>
+                    <hr />
+                </details><br />
+                <center><a href="resultado.html"><button type="button" class="btn btn-primary" style="width: 10%">Enviar</button></a></center><br />
+            </div>
+        </section>
+    </main>
+
+<!-- ======= Footer ======= -->
+<footer class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Info Ambiental</span></strong>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.min.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
